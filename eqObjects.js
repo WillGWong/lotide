@@ -32,7 +32,7 @@ const eqObjects = function(object1, object2) {
         if (eqArrays(object1[key], object2[key]) === false) {
           return false
         }
-    } else if (!Array.isArray(object1[key]) && !Array.isArray(object2[key])) {
+    } else if (object1[key] instanceof Object && object2[key] instanceof Object) {
       return eqObjects((object1[key]),(object2[key]))
     } else {
       if (object1[key] !== object2[key]) {
