@@ -7,7 +7,7 @@ const eqArrays = function(firstArr, secondArr) {
       return true;
     } else if (firstArr[i] === secondArr[i] && Array.isArray(firstArr[i])) {
       return eqArrays(firstArr[i], secondArr[i]);
-    } else { 
+    } else {
       return false;
     }
   }
