@@ -1,20 +1,3 @@
-const eqArrays = function(firstArr, secondArr) {
-  for (let i = 0; i < firstArr.length; i++) {
-    if (firstArr[i] !== secondArr[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected) === true) {
-    console.log(`✅✅✅Assertion passed: "${actual}" === "${expected}"`);
-  } else {
-    console.log(`🛑🛑🛑Assertion failed: "${actual}" !== "${expected}"`);
-  }
-};
-
 const letterPositions = function(sentence) {
   const results = {};
   let splitStr = sentence.split("")
@@ -32,4 +15,6 @@ const letterPositions = function(sentence) {
   return results;
 }
 
-console.log(letterPositions("Hello World"))
+module.exports = letterPositions
+
+//console.log(letterPositions("Hello World"))
